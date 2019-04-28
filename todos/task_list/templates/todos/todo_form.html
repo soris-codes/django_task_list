@@ -1,0 +1,10 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+<h3 class="subtitle font-italic">Task Form: {{ new_or_edit }}</h3>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn navy-btn" type="submit" value="Submit" />
+</form>
+<a class="btn btn-info" href="{% url 'todo_list' %}">Back to Task List</a>
+{% endblock %}
