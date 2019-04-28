@@ -1,0 +1,21 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+<table class="table table-striped">
+<tbody>
+    {% for todo in object_list %}
+        {% if todo.complete %}
+            <tr class="completed">
+        {% else %}
+            <tr>
+        {% endif %}
+        <td>{{ todo.text }}</td> 
+        <td><a href="{% url "todo_edit" todo.id %}"><i class="fas fa-edit"></i></a></td>
+        <td><a href="{% url "todo_delete" todo.id %}"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+<br />
+<a class="btn btn-info" href="{% url "todo_new" %}">Create New Task</a>
+{% endblock %}

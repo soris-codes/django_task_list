@@ -1,0 +1,33 @@
+.sheet {
+  text-align: center;
+  background-color:lightgray;
+  padding: 30px;
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 30%;
+  width: 540px;
+}
+
+h1, h2 {
+  font-family: 'Lobster';
+}
+
+a, .subtitle, body {
+  color: navy;
+}
+
+.navy-btn {
+  background-color: navy;
+  color: white;
+}
+
+.navy-border {
+  border: 1px dotted navy;
+  margin: 40px;
+  padding: 40px;
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: #e0f7fa;
+}

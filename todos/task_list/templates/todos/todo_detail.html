@@ -1,0 +1,8 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+<h3>Item: {{ object.text }}</h3>h3>
+<hr/>
+<a class="btn navy-btn" href="{% url 'todo_edit' object.id %}">Edit Task</a>
+<a class="btn btn-info" href="{% url 'todo_list' %}">Back to Task List</a>
+{% endblock %}
